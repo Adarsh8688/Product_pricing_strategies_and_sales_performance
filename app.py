@@ -7,7 +7,7 @@ st.set_page_config(page_title="Pricing Strategy Dashboard", layout="wide")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Sampledataset.csv")
+    df = pd.read_csv("Sampledataset.csv",encoding="ISO-8859-1")
     df["Order Date"] = pd.to_datetime(df["Order Date"])
     df["Year"] = df["Order Date"].dt.year
     return df
